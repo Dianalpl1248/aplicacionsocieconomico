@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario</title>
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/temasocieconomia.min.css"/><style type="text/css"></style>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="phonegap.js"></script><!--necesario*/-->
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/script.js"></script>
+
+</style>
+</head>
+
+<body>
+<div data-role="page" id="principal" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+  <h1><font size="5" face="Times New Roman"><em>** ESTUDIO SOCIOECONÓMICO **</em></font></h1>
+</div>
+<CENTER><p><img src="imagenes/estudio.png" width="303" height="248" align="absmiddle" border="5"></p>
+</CENTER>
+
+<form name="formulario">
+  <div align="right">
+    <input type="text" name="horafecha" id="horafecha" value="" size="40">
+  <input type="button" value="Obtener Fecha y Hora" onClick="fechahora()">
+  </div>
+</form>
+<div align="center"><br>
+<p><font size="5" face="Adobe Ming Std L">
+  <h2><b>1.- DATOS GENERALES DEL USUARIO</b></h2>
+  </font>
+<table width="401" height="223" border="2.5" cellpadding="2" cellspacing="3">
+  <tr>
+    <td>Nombre</td>
+    <td><input type="text" name="nombre" size="30"
+maxlength="100"></td>
+  </tr>
+  <tr>
+    <td>Apellidos</td>
+    <td><input type="text"
+name="Apellidos" size="25" maxlength="100"></td>
+  </tr>
+  <tr>
+    <td>Edad:</td>
+    <td><input type="text" name="edad" size="25" maxlength="100" ></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><input type="text" name="email" size="25" maxlength="100" value="@"></td>
+  </tr>
+  <tr>
+    <td>Fecha de Nacimiento:</td>
+    <td><input type="text" name="nac" size="20" maxlength="100"></td>
+  </tr>
+  </table>
+</div><form>
+  <tr>
+  <td><div align="center">
+    <p align="left"><br>
+      SEXO:    Hombre
+        <input type="radio" name="sexo" value="Varon"
+checked>
+      Mujer
+  <input type="radio" name="sexo" value="Hembra"><br>
+    </p>
+    <p align="left">ESTADO CIVIL: Casad@  
+      <input type="radio" name="civil" value="divorsiado"> 
+      Divorsiad@ 
+      <input type="radio" name="civil" value="divorsiado">
+    </p>
+    <p align="left"><br>
+      ESCOLARIDAD:
+        <input type="text" name="esco" size="25" maxlength="100">
+    </p>
+    <p align="left">OCUPACIÓN:
+      <input type="text" name="ocu" size="25" maxlength="100">
+    </p>
+    <p align="left">SELECCIONA TU PAÍS:
+      <select name="utilizacion">
+    <option value="1">Egipto
+      <option value="2">Argentina
+        <option value="3">Brasil          
+          <option value="4">Canadá 
+            <option value="5">Ecuador
+            <option value="6">México
+            <option value="7">Panamá
+          </select>
+    </p>
+    <p align="center">ES MAYOR DE EDAD
+      <input type="checkbox" name="mayor_edad" value="1" id="mayoria_edad">
+      </p>
+  </div>
+    <div id="formulariomayores" style="display:none;">
+ ERES MAYOR DE EDAD ¡FELICIDADES!:</div>
+    <hr>
+  <p align="center">
+  <h2 align="center"><font size="5" face="Adobe Ming Std L"><h2>2. DATOS DE IDENTIFICACIÓN DOMICILIARIA</h2></font>
+    <strong>
+    </p>
+    </strong></h2>
+  <p>Domicilio:
+    <input type="text" name="domi" size="25" maxlength="100">
+</p>
+  <p>Colonia:
+  <input type="text" name="domi" size="25" maxlength="100">
+    <br>Codigo Postal:
+    <input type="text" name="codi" size="25" maxlength="100">
+  </p>
+  <p>Delegacion:
+    <input type="text" name="dele" size="25" maxlength="100"><br>
+    Unidad territorial:
+    <input type="text" name="uni" size="25" maxlength="100">
+</p>
+  <p>Telefono:
+  <input type="text" name="tel" size="25" maxlength="100">
+    <br>Medios de transporte para llegar al domicilio:
+    <input type="text" name="medio" size="25" maxlength="100">
+    <br>
+  </p>
+  <hr>
+  <center><h2><font size="5" face="Adobe Ming Std L"><strong><h2>3.- INGRESOS Y EGRESOS </h2></strong></font></h2></center>
+  <p>INGRESO
+    mensual (registrar quién, cuánto aporta y suma total.):
+    <input type="text" name="ingreso" size="25" maxlength="100"><hr>
+    <img src="imagenes/notas.jpg" width="265" height="245" border="2" align="left">
+  <center><h2><font size="5" face="Adobe Ming Std L"><strong><h2>4.- VIVIENDA </h2></strong></font></h2></center>
+   
+   <p>&nbsp;</p>
+   <p>Tenencia de la vivienda:
+     <select name="utilizacion2">
+       <option value="1">Propia
+         <option value="2">Rentada
+          <option value="3">Prestada         
+          <option value="4">Invadida 
+        </select>
+     <br>
+     Tipo de vivienda:
+     <select name="utilizacion3">
+       <option value="1">Casa sola
+         <option value="2">Departamento
+          <option value="3">Vecindad         
+          <option value="4"> Albergue  
+        </select>
+     </p>
+   <hr>
+  <input name="Enviar" type="submit"
+value="Enviar formulario" >
+  <input type="Reset" value="Borrar todo">
+  <br> <br>
+</form>
+<div data-role="footer" data-theme="a">
+    <h4><strong>ALUMNA:</strong> <em>Diana Laura Peralta Larios.</em></h4>
+    </div>
+
+</body>
+</html>
